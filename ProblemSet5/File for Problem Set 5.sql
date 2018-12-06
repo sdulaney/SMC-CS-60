@@ -45,6 +45,17 @@ CREATE TABLE CUSTOMER
     CUS_PHONE    CHAR(8) NOT NULL,
     CUS_BALANCE  NUMBER(9,2) DEFAULT 0.00
   );
+
+  CREATE TABLE CUSTOMER_2
+  (
+    CUS_CODE     NUMBER PRIMARY KEY,
+    CUS_LNAME    VARCHAR(15) NOT NULL,
+    CUS_FNAME    VARCHAR(15) NOT NULL,
+    CUS_INITIAL  CHAR(1),
+    CUS_AREACODE CHAR(3) DEFAULT '615' NOT NULL,
+    CUS_PHONE    CHAR(8) NOT NULL,
+    CUS_BALANCE  NUMBER(9,2) DEFAULT 0.00
+  );
   
   
  -- select * from customer;
@@ -545,10 +556,18 @@ INTO CUSTOMER_2 VALUES
     'Justine',
     'H',
     '615',
-    '322-9870'
+    '322-9870',
+    0
   );
 INSERT INTO CUSTOMER_2 VALUES
-  (347,'Olowski','Paul','F',615,'894-2180'
+  (
+    347,
+    'Olowski',
+    'Paul',
+    'F',
+    '615',
+    '894-2180',
+    0
   );
 INSERT
 INTO CUSTOMER_2 VALUES
@@ -558,7 +577,8 @@ INTO CUSTOMER_2 VALUES
     'Carlos',
     'J',
     '723',
-    '123-7654'
+    '123-7654',
+    0
   );
 INSERT
 INTO CUSTOMER_2 VALUES
@@ -568,16 +588,38 @@ INTO CUSTOMER_2 VALUES
     'George',
     NULL,
     '723',
-    '123-7768'
+    '123-7768',
+    0
   );
 INSERT INTO CUSTOMER_2 VALUES
-  (365,'Tirpin','Khaleed','G','723','123-9876'
+  (
+    365,
+    'Tirpin',
+    'Khaleed',
+    'G',
+    '723',
+    '123-9876',
+    0
   );
 INSERT INTO CUSTOMER_2 VALUES
-  (368,'Lewis','Marie','J','734','332-1789'
+  (
+    368,
+    'Lewis',
+    'Marie',
+    'J',
+    '734',
+    '332-1789',
+    0
   );
 INSERT INTO CUSTOMER_2 VALUES
-  (369,'Dunne','Leona','K','713','894-1238'
+  (
+    369,
+    'Dunne',
+    'Leona',
+    'K',
+    '713',
+    '894-1238',
+    0
   );
 /* INVOICE rows                               */
 
